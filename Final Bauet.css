@@ -1,0 +1,128 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/Bauet_panoromic_view.png.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+header {
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
+    padding: 40px 0; 
+    position: relative; 
+    text-align: center; 
+    width: 100%;
+}
+
+header::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+.header-content {
+    position: relative; 
+    z-index: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.header-content h1 {
+    font-size: 2em; 
+    margin-top: 0px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+    margin-left: 10px; 
+    line-height: 1em; 
+}
+
+.flag-image {
+    width: 40px; 
+    height: 40px; 
+    border-radius: 10px; 
+    vertical-align: middle; 
+    margin-top: -20px; 
+}
+
+/* Registration Container */
+.registration-container {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 15px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%; /* Smaller width */
+    max-width: 300px; /* Adjusted smaller maximum width */
+    margin-top: -30px; 
+    text-align: center;
+}
+
+.registration-container h2 {
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 1.2em; /* Adjusted font size */
+    color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 10px; 
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em; 
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em; 
+}
+
+.form-group select {
+    appearance: none; 
+    background-color: white;
+    border: 1px solid #ccc; /* Match border styling with input fields */
+    border-radius: 5px; /* Consistent shape */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

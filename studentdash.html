@@ -1,0 +1,99 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Army University of Engineering & Technology - Student Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <img src="images/BAUET-Logo-1.png" alt="University Logo">
+            <div class="header-text">
+                <h1>Bangladesh Army University of Engineering & Technology</h1>
+                <h2>Student Dashboard</h2>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <div class="content">
+            <div class="content-header">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Contents</h1>
+            </div>
+            <ul id="content-menu">
+                <li><a href="http://localhost:8080/Project%20Website/studentfeedbackcourse.html" target = "_blank"><i class="fas fa-comment-dots"></i> Course Feedback</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Course Teacher Feedback</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> CO & PO Marks View</a></li>
+                <li><a href="#"><i class="fas fa-scroll"></i> Thesis Feedback View</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> OBE Transcript Progress</a></li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="dashboard">
+            <div class="card" onclick="location.href='#Course Teacher Feedback'">
+                <h3><u>Course Teacher Feedback</u></h3>
+                <ul>
+                    <li><a href="#">Enter Feedback</a></li>
+                    
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#course-feedback'">
+                <h3><u>Course Feedback</u></h3>
+                <ul>
+                    <li><a href="studentfeedbackcourse.php"target = "_blank">Enter Feedback</a></li>
+                    
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#co-po-marks'">
+                <h3><u>CO & PO Marks View</u></h3>
+                <ul>
+                
+                    <li><a href="#">Marks View</a></li>
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#thesis-feedback'">
+                <h3><u>Thesis Feedback View</u></h3>
+                <ul>
+                
+                    <li><a href="#">View Feedback</a></li>
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#obe-transcript'">
+                <h3><u>OBE Transcript Progress</u></h3>
+                <ul>
+                    
+                    <li><a href="#">View Progress</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("content-menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>

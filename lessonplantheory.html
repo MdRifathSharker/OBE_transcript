@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Plan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .lesson-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .column-title {
+            font-weight: bold;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+
+        #lessonTable th:nth-child(1),
+        #lessonTable td:nth-child(1) {
+            width: 50px;
+        }
+
+        #lessonTable th:nth-child(2),
+        #lessonTable td:nth-child(2) {
+            width: 150px;
+        }
+
+        #lessonTable th:nth-child(3),
+        #lessonTable td:nth-child(3) {
+            width: 50px;
+        }
+
+        #lessonTable textarea, #lessonTable select {
+            width: 100%;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 30px; 
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+        function addRow() {
+            let table = document.getElementById("lessonTable");
+            let newRow = table.insertRow(-1);
+
+            
+            let cellCOs = newRow.insertCell(0);
+            let selectCOs = document.createElement("select");
+            for (let i = 1; i <= 4; i++) {
+                let option = document.createElement("option");
+                option.value = "CO" + i;
+                option.text = "CO" + i;
+                selectCOs.appendChild(option);
+            }
+            cellCOs.appendChild(selectCOs);
+
+          
+            let cellStatements = newRow.insertCell(1);
+            let inputStatements = document.createElement("textarea");
+            cellStatements.appendChild(inputStatements);
+
+            let cellPO = newRow.insertCell(2);
+            let selectPO = document.createElement("select");
+            for (let i = 1; i <= 12; i++) {
+                let option = document.createElement("option");
+                option.value = "PO" + i;
+                option.text = "PO" + i;
+                selectPO.appendChild(option);
+            }
+            cellPO.appendChild(selectPO);
+
+            for (let i = 3; i < 9; i++) {
+                let cell = newRow.insertCell(i);
+                let input = document.createElement("textarea");
+                cell.appendChild(input);
+            }
+
+           
+            let deleteCell = newRow.insertCell(9);
+            let deleteButton = document.createElement("button");
+            deleteButton.innerText = "Remove";
+            deleteButton.style.padding = "6px 12px";
+            deleteButton.style.backgroundColor = "#ff4d4d";
+            deleteButton.style.color = "white";
+            deleteButton.style.border = "none";
+            deleteButton.style.borderRadius = "4px";
+            deleteButton.style.cursor = "pointer";
+            deleteButton.style.fontSize = "14px";
+            deleteButton.style.transition = "background-color 0.3s ease";
+            deleteButton.addEventListener("mouseover", function () {
+                deleteButton.style.backgroundColor = "#ff1a1a";
+            });
+            deleteButton.onclick = function () { table.deleteRow(newRow.rowIndex); };
+            deleteCell.appendChild(deleteButton);
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('lessonTable');
+            const opt = {
+                margin: 10,
+                filename: 'lesson_plan.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().from(element).set(opt).save();
+        }
+    </script>
+</head>
+
+<body class="body">
+    <h2 class="lesson-title">Lesson Plan</h2>
+    <table id="lessonTable">
+        <tr>
+            <th class="column-title">COs</th>
+            <th class="column-title">CO Statements</th>
+            <th class="column-title">PO</th>
+            <th class="column-title">KP</th>
+            <th class="column-title">WP</th>
+            <th class="column-title">EA</th>
+            <th class="column-title">Bloom's Level</th>
+            <th class="column-title">Delivery Methods</th>
+            <th class="column-title">Assessment Tools</th>
+            <th class="column-title">Action</th>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button class="button" onclick="addRow()">Add Row</button>
+        <button class="button" onclick="downloadPDF()">Download</button>
+    </div>
+</body>
+
+</html>

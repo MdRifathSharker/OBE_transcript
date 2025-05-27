@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="">
+    <style>
+           body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgb(0, 32, 84);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    }
+   .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar ul li {
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #34495e;
+            position: relative;
+        }
+        .sidebar ul li ul.submenu {
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .submenu.active {
+            display: block !important;
+        }
+
+        .sidebar ul li ul.submenu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+   .sidebar ul li.active {
+    background: #1f6692b9;
+    color: white;
+}
+
+      /* Added style for the toggle icon */
+    .toggle-icon {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+   }
+
+   .toggle-icon.rotate {
+    transform: translateY(-50%) rotate(180deg);
+   }
+
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2980b9;
+            color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+        .submit-btn {
+            background: #2980b9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <img src="images/bauet-logo2.png" alt="BAUET Logo">
+        <h1>Bangladesh Army University of Engineering & Technology</h1>
+    </header>
+    <div class="sidebar">
+            <img src="images/bauet_logo.png" alt="BAUET Logo">
+        <ul>
+            <li class="toggle-menu">
+                <i class="fas fa-file-alt"></i> Survey Questionnaire for Alumni
+                <i class="fas fa-chevron-down toggle-icon"></i>
+                <ul class="submenu">
+                    <li><i class="fas fa-user"></i> Personal Information</li>
+                    <li><i class="fas fa-briefcase"></i> Employment Information</li>
+                    <li><i class="fas fa-graduation-cap"></i> Further Education</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Academic Experience</li>
+                   <li><i class="fas fa-users"></i> Alumni Engagement</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+
+    
+    <div class="main-content">
+        <div class="top-bar">
+            <h2>Survey Questionnaire for Alumni</h2>
+            <div class="user-info">
+                <img src="user.png" alt="User Profile">
+                <span>Partho Sarkar</span>
+            </div>
+        </div>
+        <div class="form-container">
+            <h3><i class="fas fa-briefcase"></i> Employment Information</h3>
+            <form>
+                <div class="form-group">
+                    <label>Current Employer</label>
+                    <input type="text" name="current_employer" required>
+                </div>
+                <div class="form-group">
+                    <label>Job Title</label>
+                    <input type="text" name="job_title" required>
+                </div>
+                <div class="form-group">
+                    <label>Joining Date of Current Job</label>
+                    <input type="date" name="joining_date" required>
+                </div>
+                <div class="form-group">
+                    <label>Employment Sector</label>
+                    <select name="employment_sector" required>
+                        <option value="Private">Private</option>
+                        <option value="Public">Public</option>
+                        <option value="Non-Profit">Non-Profit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Industry</label>
+                    <input type="text" name="industry" required>
+                </div>
+                <div class="form-group">
+                    <label>Relevance of Degree to Current Job (1-5)</label>
+                    <input type="number" name="relevance_degree" min="1" max="5" required>
+                </div>
+                <div class="form-group">
+                    <label>Previous Employers (If applicable)</label>
+                    <textarea name="previous_employers"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Job Satisfaction (1-5)</label>
+                    <input type="number" name="job_satisfaction" min="1" max="5" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    let toggleMenu = document.querySelector(".toggle-menu");
+    let submenu = document.querySelector(".submenu");
+    let icon = document.querySelector(".toggle-icon");
+
+    // Toggle submenu on click
+    toggleMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+        submenu.classList.toggle("active");
+        icon.classList.toggle("rotate");
+    });
+
+    // Navigation links
+    let menuItems = document.querySelectorAll(".submenu li");
+    let pages = ["alumnipersonaldata.html", "currentjobalumni.html", "furtheredualumni.html", "academicexpalumni.html", "alumniinterest.html"];
+
+    menuItems.forEach((item, index) => {
+        item.addEventListener("click", function () {
+            window.location.href = pages[index];
+        });
+    });
+
+    // Highlight active menu item
+    let currentPage = window.location.pathname.split("/").pop();
+    menuItems.forEach((item, index) => {
+        if (currentPage === pages[index]) {
+            item.classList.add("active");
+        }
+    });
+});
+</script>
+    
+</body>
+</html>

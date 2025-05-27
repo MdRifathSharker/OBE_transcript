@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Experience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+       body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgb(0, 32, 84);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .sidebar {
+            width: 220px;
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            left: 0;
+        }
+        .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar ul li {
+            font-weight: bold;
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #34495e;
+            position: relative;
+        }
+        .sidebar ul li ul.submenu {
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .submenu.active {
+            display: block !important;
+        }
+        .sidebar ul li ul.submenu li:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .sidebar ul li.active {
+    background: #1f6692b9;
+    color: white;
+}
+        /* Added style for the toggle icon */
+    .toggle-icon {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+   }
+
+   .toggle-icon.rotate {
+    transform: translateY(-50%) rotate(180deg);
+   }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2980b9;
+            color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 640px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .h2_1{
+            text-align: center;
+            color: white;
+        }
+        .h2_2{
+            text-align: center;
+            color: #2980b9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #2980b9;
+            color: white;
+        }
+        .submit-btn {
+            background: #2980b9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .submit-btn:hover {
+            background: #1f6692;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <img src="images/bauet-logo2.png" alt="BAUET Logo">
+        <h1><span>Bangladesh Army University of Engineering & Technology</span></h1>
+    </header>
+    <div class="sidebar">
+        <img src="images/bauet_logo.png" alt="BAUET Logo">
+        <ul>
+            <li class="toggle-menu">
+                <i class="fas fa-file-alt"></i> Survey Questionnaire for Alumni
+                <i class="fas fa-chevron-down toggle-icon"></i>  <!-- Added an icon for visibility -->
+                <ul class="submenu">
+                    <li><i class="fas fa-user"></i> Personal Information</li>
+                    <li><i class="fas fa-briefcase"></i> Employment Information</li>
+                    <li><i class="fas fa-graduation-cap"></i> Further Education</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Academic Experience</li>
+                    <li><i class="fas fa-users"></i> Alumni Engagement</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="top-bar">
+            <h2 class="h2_1">Survey Questionnaire for Alumni</h2>
+            <div class="user-info">
+                <img src="user.png" alt="User Profile">
+                <span>Partho Sarkar</span>
+            </div>
+        </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h2 class="h2_2">Academic Experience</h2>
+            <p>Evaluate the following aspects of the program in terms of its capacity to provide quality education by marking “√” in the box of corresponding column according to the scale given:</p>
+            <p><b>5 – Very Satisfied | 4 – Satisfied | 3 – Neutral | 2 – Dissatisfied | 1 – Very Dissatisfied</b></p>
+            <form>
+                <table>
+                    <tr>
+                        <th>Academic Experience</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>1</th>
+                    </tr>
+                    <tr>
+                        <td>Overall Satisfaction with Program</td>
+                        <td><input type="radio" name="satisfaction" value="5"></td>
+                        <td><input type="radio" name="satisfaction" value="4"></td>
+                        <td><input type="radio" name="satisfaction" value="3"></td>
+                        <td><input type="radio" name="satisfaction" value="2"></td>
+                        <td><input type="radio" name="satisfaction" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Quality of Instruction</td>
+                        <td><input type="radio" name="instruction" value="5"></td>
+                        <td><input type="radio" name="instruction" value="4"></td>
+                        <td><input type="radio" name="instruction" value="3"></td>
+                        <td><input type="radio" name="instruction" value="2"></td>
+                        <td><input type="radio" name="instruction" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Curriculum Relevance</td>
+                        <td><input type="radio" name="curriculum" value="5"></td>
+                        <td><input type="radio" name="curriculum" value="4"></td>
+                        <td><input type="radio" name="curriculum" value="3"></td>
+                        <td><input type="radio" name="curriculum" value="2"></td>
+                        <td><input type="radio" name="curriculum" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Facilities and Resources</td>
+                        <td><input type="radio" name="facilities" value="5"></td>
+                        <td><input type="radio" name="facilities" value="4"></td>
+                        <td><input type="radio" name="facilities" value="3"></td>
+                        <td><input type="radio" name="facilities" value="2"></td>
+                        <td><input type="radio" name="facilities" value="1"></td>
+                    </tr>
+                </table>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!--JAVA SCRIPT-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+let toggleMenu = document.querySelector(".toggle-menu");
+let submenu = document.querySelector(".submenu");
+let icon = document.querySelector(".toggle-icon");
+
+// Toggle submenu on click
+toggleMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+    submenu.classList.toggle("active");
+    icon.classList.toggle("rotate");
+});
+
+// Navigation links
+let menuItems = document.querySelectorAll(".submenu li");
+let pages = ["alumnipersonaldata.html", "currentjobalumni.html", "furtheredualumni.html", "academicexpalumni.html", "alumniinterest.html"];
+
+menuItems.forEach((item, index) => {
+    item.addEventListener("click", function () {
+        window.location.href = pages[index]; // Redirect to respective page
+    });
+});
+
+// Highlight active menu item
+let currentPage = window.location.pathname.split("/").pop();
+menuItems.forEach((item, index) => {
+    if (currentPage === pages[index]) {
+        item.classList.add("active");
+    }
+});
+});
+</script>
+
+</body>
+</html>

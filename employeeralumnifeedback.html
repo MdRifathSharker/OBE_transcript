@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Feedback Form</title>
+    <link rel="stylesheet" href="employee.css"> 
+</head>
+
+<body>
+    <header class="top-header">
+        <img src="images/BAUET-Logo-1.png" alt="BAUET Logo">
+        <h1>Bangladesh Army University of Engineering & Technology</h1>
+    </header>
+    <div class="sidebar">
+        <img src="images/bauet_logo.png" alt="BAUET Logo">
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <h2>Employer Feedback Form</h2>
+        </div>
+        <div class="container">
+            <p>Dear Employer,</p>
+            <p>Thank you for taking the time to provide feedback on the performance and skills of our graduates. Your valuable input helps us to improve our educational programs and better prepare our students for the professional world. Please follow the instructions below to complete the form:</p>
+
+            <h3>Section 1: Employer Information</h3>
+            <table>
+                <tr>
+                    <td><strong>Company Name:</strong></td>
+                    <td><input type="text" placeholder="Enter company name"></td>
+                </tr>
+                <tr>
+                    <td><strong>Contact Person:</strong></td>
+                    <td><input type="text" placeholder="Enter contact person"></td>
+                </tr>
+                <tr>
+                    <td><strong>Contact Email:</strong></td>
+                    <td><input type="text" placeholder="Enter contact email"></td>
+                </tr>
+                <tr>
+                    <td><strong>Contact Phone:</strong></td>
+                    <td><input type="text" placeholder="Enter contact phone"></td>
+                </tr>
+            </table>
+
+            <h3>Section 2: Graduate Information</h3>
+            <table>
+                <tr>
+                    <td><strong>Graduate's Name:</strong></td>
+                    <td><input type="text" placeholder="Enter graduate's name"></td>
+                </tr>
+                <tr>
+                    <td><strong>Job Title of the Graduate:</strong></td>
+                    <td><input type="text" placeholder="Enter job title"></td>
+                </tr>
+                <tr>
+                    <td><strong>Employment Duration:</strong></td>
+                    <td><input type="text" placeholder="Enter employment duration"></td>
+                </tr>
+            </table>
+            <h3>Section 3: Graduate Performance Evaluation</h3>
+            <p>Please rate the following dimensions of quality of graduates according to importance in recruitment using the following rating scale:</p>
+            <p><strong>4 = Excellent, 3 = Good, 2 = Average, 1 = Poor</strong></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th class="rating-header">Excellent (4)</th>
+                        <th class="rating-header">Good (3)</th>
+                        <th class="rating-header">Average (2)</th>
+                        <th class="rating-header">Poor (1)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Job Knowledge:</strong> Rate the graduate's understanding and application of job-specific knowledge</td>
+                        <td><input type="radio" name="job_knowledge" value="4"></td>
+                        <td><input type="radio" name="job_knowledge" value="3"></td>
+                        <td><input type="radio" name="job_knowledge" value="2"></td>
+                        <td><input type="radio" name="job_knowledge" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Skills:</strong> Assess the graduate's technical skills and their ability to use tools and technologies relevant to their job</td>
+                        <td><input type="radio" name="technical_skills" value="4"></td>
+                        <td><input type="radio" name="technical_skills" value="3"></td>
+                        <td><input type="radio" name="technical_skills" value="2"></td>
+                        <td><input type="radio" name="technical_skills" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Communication Skills:</strong> Evaluate the graduate's written and oral communication skills</td>
+                        <td><input type="radio" name="communication_skills" value="4"></td>
+                        <td><input type="radio" name="communication_skills" value="3"></td>
+                        <td><input type="radio" name="communication_skills" value="2"></td>
+                        <td><input type="radio" name="communication_skills" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Teamwork:</strong> Comment on the graduate's ability to work effectively within a team</td>
+                        <td><input type="radio" name="teamwork" value="4"></td>
+                        <td><input type="radio" name="teamwork" value="3"></td>
+                        <td><input type="radio" name="teamwork" value="2"></td>
+                        <td><input type="radio" name="teamwork" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Problem-Solving Skills:</strong> Rate the graduate's ability to identify problems and develop effective solutions</td>
+                        <td><input type="radio" name="problem_solving" value="4"></td>
+                        <td><input type="radio" name="problem_solving" value="3"></td>
+                        <td><input type="radio" name="problem_solving" value="2"></td>
+                        <td><input type="radio" name="problem_solving" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Work Ethics:</strong> Evaluate the graduate's professionalism, reliability, and work ethics</td>
+                        <td><input type="radio" name="work_ethics" value="4"></td>
+                        <td><input type="radio" name="work_ethics" value="3"></td>
+                        <td><input type="radio" name="work_ethics" value="2"></td>
+                        <td><input type="radio" name="work_ethics" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adaptability:</strong> Assess the graduate's ability to adapt to new challenges and changes in the workplace</td>
+                        <td><input type="radio" name="adaptability" value="4"></td>
+                        <td><input type="radio" name="adaptability" value="3"></td>
+                        <td><input type="radio" name="adaptability" value="2"></td>
+                        <td><input type="radio" name="adaptability" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Leadership Skills:</strong> If applicable, rate the graduate's leadership abilities and potential</td>
+                        <td><input type="radio" name="leadership" value="4"></td>
+                        <td><input type="radio" name="leadership" value="3"></td>
+                        <td><input type="radio" name="leadership" value="2"></td>
+                        <td><input type="radio" name="leadership" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall Performance:</strong> Rate your overall satisfaction with the graduate’s performance and contributions to your organization</td>
+                        <td><input type="radio" name="overall_performance" value="4"></td>
+                        <td><input type="radio" name="overall_performance" value="3"></td>
+                        <td><input type="radio" name="overall_performance" value="2"></td>
+                        <td><input type="radio" name="overall_performance" value="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Additional Questions</h3>
+            <table>
+                <tr>
+                    <td><strong>Major weaknesses you have observed, working at your organization:</strong></td>
+                    <td><textarea placeholder="Enter weaknesses"></textarea></td>
+                </tr>
+                <tr>
+                    <td><strong>Do you provide any training just after recruitment before assigning any responsibility? (If yes/no, please specify):</strong></td>
+                    <td><textarea placeholder="Enter details"></textarea></td>
+                </tr>
+                <tr>
+                    <td><strong>Likelihood of Hiring More Graduates (If yes/no, please specify):</strong></td>
+                    <td><textarea placeholder="Enter likelihood"></textarea></td>
+                </tr>
+            </table>
+
+            <h3>General Comments</h3>
+            <table>
+                <tr>
+                    <td><strong>Please make additional comments or suggestions, which you think would help to strengthen our academic programs for the improvement of the quality of graduates:</strong></td>
+                    <td><textarea placeholder="Enter comments"></textarea></td>
+                </tr>
+            </table>
+
+            <h3>Signature & Date</h3>
+            <table>
+                <tr>
+                    <td><strong>Signature & Date:</strong></td>
+                    <td><input type="text" placeholder="Enter signature and date"></td>
+                </tr>
+            </table>
+
+            <button type="submit">Submit Feedback</button>
+        </div>
+    </div>
+</body>
+</html>

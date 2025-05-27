@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Feedback (By Course Teacher)</title>
+    <link rel="stylesheet" href="teacher.css">
+
+</head>
+<body>
+    <header class="top-header">
+        <img src="images/BAUET-Logo-1.png" alt="BAUET Logo">
+        <h1>Bangladesh Army University of Engineering & Technology</h1>
+    </header>
+    <div class="sidebar">
+        <img src="images/bauet_logo.png" alt="BAUET Logo">
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <h2>Course Feedback (By Course Teacher)</h2>
+        </div>
+        <div class="container">
+            <p>Dear Faculty Members,</p>
+            <p>As we approach the end of the semester, your input is invaluable in helping us assess and enhance our academic programs. Please follow the instructions below to complete the Course Feedback Form. Your thoughtful feedback is crucial for maintaining and improving the quality of our courses.</p>
+
+            <table>
+                <tr>
+                    <td><strong>Teachers’ Name:</strong></td>
+                    <td><input type="text" name="teacherName"></td>
+                </tr>
+                <tr>
+                    <td><strong>Designation & Dept.:</strong></td>
+                    <td><input type="text" name="designation"></td>
+                </tr>
+                <tr>
+                    <td><strong>Session:</strong></td>
+                    <td><input type="text" name="session"></td>
+                </tr>
+                <tr>
+                    <td><strong>Batch:</strong></td>
+                    <td><input type="text" name="batch"></td>
+                </tr>
+                <tr>
+                    <td><strong>Course Code & Title:</strong></td>
+                    <td><input type="text" name="course"></td>
+                </tr>
+            </table>
+
+            <h3>Please rate the following dimensions of quality of graduates according to importance in recruitment using the following rating scale:</h3>
+            <p><strong>4 = Excellent, 3 = Good, 2 = Average, 1 = Poor</strong></p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th class="rating-header">Excellent (4)</th>
+                        <th class="rating-header">Good (3)</th>
+                        <th class="rating-header">Average (2)</th>
+                        <th class="rating-header">Poor (1)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="5" class="section-heading">Course Content</td>
+                    </tr>
+                    <tr>
+                        <td>Relevance of the course content to the program outcomes</td>
+                        <td><input type="radio" name="course_content_relevance" value="4"></td>
+                        <td><input type="radio" name="course_content_relevance" value="3"></td>
+                        <td><input type="radio" name="course_content_relevance" value="2"></td>
+                        <td><input type="radio" name="course_content_relevance" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Clarity and comprehensiveness of course objectives</td>
+                        <td><input type="radio" name="course_objectives" value="4"></td>
+                        <td><input type="radio" name="course_objectives" value="3"></td>
+                        <td><input type="radio" name="course_objectives" value="2"></td>
+                        <td><input type="radio" name="course_objectives" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Alignment of course content with industry standards and future trends</td>
+                        <td><input type="radio" name="course_alignment" value="4"></td>
+                        <td><input type="radio" name="course_alignment" value="3"></td>
+                        <td><input type="radio" name="course_alignment" value="2"></td>
+                        <td><input type="radio" name="course_alignment" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="section-heading">Teaching Methods</td>
+                    </tr>
+                    <tr>
+                        <td>Effectiveness of teaching methods used</td>
+                        <td><input type="radio" name="teaching_methods" value="4"></td>
+                        <td><input type="radio" name="teaching_methods" value="3"></td>
+                        <td><input type="radio" name="teaching_methods" value="2"></td>
+                        <td><input type="radio" name="teaching_methods" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Use of innovative teaching tools and technologies</td>
+                        <td><input type="radio" name="innovative_tools" value="4"></td>
+                        <td><input type="radio" name="innovative_tools" value="3"></td>
+                        <td><input type="radio" name="innovative_tools" value="2"></td>
+                        <td><input type="radio" name="innovative_tools" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Integration of real-world examples and case studies</td>
+                        <td><input type="radio" name="real_world" value="4"></td>
+                        <td><input type="radio" name="real_world" value="3"></td>
+                        <td><input type="radio" name="real_world" value="2"></td>
+                        <td><input type="radio" name="real_world" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="section-heading">Assessment Methods</td>
+                    </tr>
+                    <tr>
+                        <td>Alignment of assessments with learning outcomes</td>
+                        <td><input type="radio" name="assessment_alignment" value="4"></td>
+                        <td><input type="radio" name="assessment_alignment" value="3"></td>
+                        <td><input type="radio" name="assessment_alignment" value="2"></td>
+                        <td><input type="radio" name="assessment_alignment" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Variety and fairness of assessment methods</td>
+                        <td><input type="radio" name="assessment_fairness" value="4"></td>
+                        <td><input type="radio" name="assessment_fairness" value="3"></td>
+                        <td><input type="radio" name="assessment_fairness" value="2"></td>
+                        <td><input type="radio" name="assessment_fairness" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Feedback provided to students on their performance</td>
+                        <td><input type="radio" name="feedback" value="4"></td>
+                        <td><input type="radio" name="feedback" value="3"></td>
+                        <td><input type="radio" name="feedback" value="2"></td>
+                        <td><input type="radio" name="feedback" value="1"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="section-heading">Student Engagement</td>
+                    </tr>
+                    <tr>
+                        <td>Opportunities for student participation and interaction</td>
+                        <td><input type="radio" name="engagement" value="4"></td>
+                        <td><input type="radio" name="engagement" value="3"></td>
+                        <td><input type="radio" name="engagement" value="2"></td>
+                        <td><input type="radio" name="engagement" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Use of collaborative and group work</td>
+                        <td><input type="radio" name="collaboration" value="4"></td>
+                        <td><input type="radio" name="collaboration" value="3"></td>
+                        <td><input type="radio" name="collaboration" value="2"></td>
+                        <td><input type="radio" name="collaboration" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Encouragement of critical thinking and problem-solving</td>
+                        <td><input type="radio" name="critical_thinking" value="4"></td>
+                        <td><input type="radio" name="critical_thinking" value="3"></td>
+                        <td><input type="radio" name="critical_thinking" value="2"></td>
+                        <td><input type="radio" name="critical_thinking" value="1"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="section-heading">Learning Resources</td>
+                    </tr>
+                    <tr>
+                        <td>Availability and adequacy of learning resources (books, online materials, etc.)</td>
+                        <td><input type="radio" name="learning_resources" value="4"></td>
+                        <td><input type="radio" name="learning_resources" value="3"></td>
+                        <td><input type="radio" name="learning_resources" value="2"></td>
+                        <td><input type="radio" name="learning_resources" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Quality and relevance of supplementary materials</td>
+                        <td><input type="radio" name="supplementary_materials" value="4"></td>
+                        <td><input type="radio" name="supplementary_materials" value="3"></td>
+                        <td><input type="radio" name="supplementary_materials" value="2"></td>
+                        <td><input type="radio" name="supplementary_materials" value="1"></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="5" class="section-heading">Overall Course Effectiveness</td>
+                    </tr>
+                    <tr>
+                        <td>Achievement of course learning outcomes</td>
+                        <td><input type="radio" name="course_effectiveness" value="4"></td>
+                        <td><input type="radio" name="course_effectiveness" value="3"></td>
+                        <td><input type="radio" name="course_effectiveness" value="2"></td>
+                        <td><input type="radio" name="course_effectiveness" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Contribution to the overall program objectives and goals</td>
+                        <td><input type="radio" name="program_objectives" value="4"></td>
+                        <td><input type="radio" name="program_objectives" value="3"></td>
+                        <td><input type="radio" name="program_objectives" value="2"></td>
+                        <td><input type="radio" name="program_objectives" value="1"></td>
+                    </tr>
+                    <tr>
+                        <td>Student satisfaction with the course</td>
+                        <td><input type="radio" name="student_satisfaction" value="4"></td>
+                        <td><input type="radio" name="student_satisfaction" value="3"></td>
+                        <td><input type="radio" name="student_satisfaction" value="2"></td>
+                        <td><input type="radio" name="student_satisfaction" value="1"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Additional Comments</h3>
+            <textarea name="comments" placeholder="Any other comments or suggestions to improve the course"></textarea>
+
+            <h3>Signature & Date</h3>
+            <input type="text" name="signature" placeholder="Enter signature and date">
+
+            <button type="submit">Submit Feedback</button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        
+        .p1{
+            font-weight: normal;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .response-options th {
+            text-align: center;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .signature {
+            margin-top: 20px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f4f7fc;
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+        .top-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: rgb(0, 32, 84);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .top-header img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    }
+   .sidebar img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+   .sidebar ul {
+    list-style: none;
+    padding-left: 0;
+   }
+
+.sidebar ul li {
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #34495e;
+    position: relative;
+}
+
+.sidebar ul li ul.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none; /* Hidden by default */
+}
+
+.sidebar ul li ul.submenu li {
+    font-weight: normal;
+    padding: 8px;
+    border-bottom: none;
+}
+
+.sidebar ul li ul.submenu li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.submenu.active {
+    display: block !important; 
+}
+
+/* Added style for the toggle icon */
+    .toggle-icon {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s;
+   }
+
+   .toggle-icon.rotate {
+    transform: translateY(-50%) rotate(180deg);
+   }
+
+    
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2980b9;
+            color: white;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .user-info img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+        .submit-btn {
+            background: #2980b9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .submit-btn:hover {
+            background: #1f6692;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                position: absolute;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .top-bar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .form-container {
+                padding: 15px;
+            }
+        }
+        button{
+            background-color: rgb(57, 87, 28);
+            color: #f2f2f2;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+        <header class="top-header">
+            <img src="Images/bauet-logo2.png" alt="BAUET Logo">
+            <h1><span>Bangladesh Army University of Engineering & Technology</span></h1>
+        </header>
+        <div class="sidebar">
+            <img src="Images/bauet_logo.png" alt="BAUET Logo">
+            <ul>
+                <li class="toggle-menu">
+                        
+                </li>
+        </div>
+        
+        
+    <div class="main-content">
+        <div class="top-bar">
+            <h2>Survey Questionnaire for Graduating Students</h2>
+            <div class="user-info">
+            </div>
+        
+    </div>
+    <body>
+        <div class="container">
+            <h2 style="text-align: center;"><u>SURVEY QUESTIONNAIRE FOR GRADUATING STUDENTS</u></h2>
+            <p><b>Dear Graduating Students,</b></p>
+            <p>We kindly request you to complete this survey as part of the graduation process.. Your feedback is crucial for us to improve the academic and student life experience at our institution. Please follow the instructions below to ensure your survey is completed accurately and efficiently.  </p>
+            <h4>1. Personal Information:</h4>
+    <p>Fill in your personal information accurately. This includes your name, student ID, department, and program of study. This information helps us categorize feedback appropriately.</p>
+    
+    <h4>2. Survey Questions:</h4>
+    <p>Answer all the questions honestly and thoughtfully. The survey covers various aspects of your academic experience, including:</p>
+    <ul>
+        <li><strong>Academic Programs:</strong> Quality of courses, curriculum, and teaching methods.</li>
+        <li><strong>Faculty:</strong> Accessibility, support, and teaching effectiveness.</li>
+        <li><strong>Facilities:</strong> Quality of classrooms, labs, libraries, and other infrastructure.</li>
+        <li><strong>Support Services:</strong> Career services, counseling, and administrative support.</li>
+        <li><strong>Extracurricular Activities:</strong> Clubs, sports, and other student activities.</li>
+        <li><strong>Overall Experience:</strong> Your overall satisfaction with your time at the institution.</li>
+    </ul>
+            <fieldset>
+                <h3>Survey Questions</h3>
+            <table>
+                <tr>
+                    <th>Program Outcome</th>
+                    <th><p class="p1">Evaluate the following aspects of the program in terms of capacity to provide quality education by marking “√” in the box of corresponding column according to the scale given:</p>
+                        <div class="scale">
+                            <strong>Scale:</strong> 4–Excellent; 3–Good; 2–Fair; 1–Poor;
+                        </div>Survey Question</th>
+                    <th colspan="4" class="response-options">Response Options</th>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                    <th>Poor (1)</th>
+                    <th>Fair (2)</th>
+                    <th>Good (3)</th>
+                    <th>Excellent (4)</th>
+                </tr>
+                <tr>
+                    <td>PO1: Engineering Knowledge</td>
+                    <td>How well do you feel the program provided you with a strong foundation in engineering knowledge?</td>
+                    <td><input type="radio" name="po1" value="1"></td>
+                    <td><input type="radio" name="po1" value="2"></td>
+                    <td><input type="radio" name="po1" value="3"></td>
+                    <td><input type="radio" name="po1" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO2: Problem Analysis</td>
+                    <td>How effectively did the program prepare you to
+                        analyze and solve engineering problems?
+                        </td>
+                    <td><input type="radio" name="po2" value="1"></td>
+                    <td><input type="radio" name="po2" value="2"></td>
+                    <td><input type="radio" name="po2" value="3"></td>
+                    <td><input type="radio" name="po2" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO3: Design/Development of Solutions </td>
+                    <td>How well did the program equip you to design solutions that meet specific needs while considering constraints? 
+                        </td>
+                    <td><input type="radio" name="po3" value="1"></td>
+                    <td><input type="radio" name="po3" value="2"></td>
+                    <td><input type="radio" name="po3" value="3"></td>
+                    <td><input type="radio" name="po3" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO4: Conduct 
+                        Investigations of Complex 
+                        Problems 
+                         </td>
+                    <td>How proficient are you in conducting investigations and analyzing data to solve complex engineering problems? 
+                        </td>
+                    <td><input type="radio" name="po4" value="1"></td>
+                    <td><input type="radio" name="po4" value="2"></td>
+                    <td><input type="radio" name="po4" value="3"></td>
+                    <td><input type="radio" name="po4" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO5: Modern Tool Usage 
+                         </td>
+                    <td>How well did the program prepare you to use modern engineering tools and techniques? 
+                        </td>
+                    <td><input type="radio" name="po5" value="1"></td>
+                    <td><input type="radio" name="po5" value="2"></td>
+                    <td><input type="radio" name="PO5" value="3"></td>
+                    <td><input type="radio" name="po5" value="4"></td>
+                </tr>
+                
+                <tr>
+                    <td>PO6: The Engineer and Society  
+                         </td>
+                    <td>How effectively did the program make you aware of the social, environmental, and ethical responsibilities of an engineer? 
+                        </td>
+                    <td><input type="radio" name="po6" value="1"></td>
+                    <td><input type="radio" name="po6" value="2"></td>
+                    <td><input type="radio" name="po6" value="3"></td>
+                    <td><input type="radio" name="po6" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO7: Environment and 
+                        Sustainability 
+                        
+                         </td>
+                    <td>How well did the program prepare you to address environmental and sustainability issues in engineering practice? 
+                        </td>
+                    <td><input type="radio" name="po7" value="1"></td>
+                    <td><input type="radio" name="po7" value="2"></td>
+                    <td><input type="radio" name="po7" value="3"></td>
+                    <td><input type="radio" name="po7" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO8: Ethics 
+                         </td>
+                    <td>How adequately did the program address engineering ethics and professional conduct?  
+                        </td>
+                    <td><input type="radio" name="po8" value="1"></td>
+                    <td><input type="radio" name="po8" value="2"></td>
+                    <td><input type="radio" name="po8" value="3"></td>
+                    <td><input type="radio" name="po8" value="4"></td>
+                </tr>
+                <tr>
+                    <td>PO9: : Individual and Team Work 
+                         </td>
+                    <td>How well did the program prepare you to work effectively both individually and as part of a team? 
+                        </td>
+                    <td><input type="radio" name="po9" value="1"></td>
+                    <td><input type="radio" name="po9" value="2"></td>
+                    <td><input type="radio" name="po9" value="3"></td>
+                    <td><input type="radio" name="po9" value="4"></td>
+                </tr>
+                <tr>
+                    <td>P010: Communication 
+                         </td>
+                    <td>How proficient are you in communicating effectively in both written and oral forms? 
+                        </td>
+                    <td><input type="radio" name="po10" value="1"></td>
+                    <td><input type="radio" name="po10" value="2"></td>
+                    <td><input type="radio" name="po10" value="3"></td>
+                    <td><input type="radio" name="po10" value="4"></td>
+                </tr>
+                <tr>
+                    <td>P011: Project Management 
+                         </td>
+                    <td>How effectively did the program prepare you for project management and understanding of project lifecycles?  
+                        </td>
+                    <td><input type="radio" name="po11" value="1"></td>
+                    <td><input type="radio" name="po11" value="2"></td>
+                    <td><input type="radio" name="po11" value="3"></td>
+                    <td><input type="radio" name="po11" value="4"></td>
+                </tr>
+                <tr>
+                    <td>P012: : Lifelong Learning 
+                         </td>
+                    <td>How well did the program prepare you for continuous learning and professional development? 
+                        </td>
+                    <td><input type="radio" name="po12" value="1"></td>
+                    <td><input type="radio" name="po12" value="2"></td>
+                    <td><input type="radio" name="po12" value="3"></td>
+                    <td><input type="radio" name="po12" value="4"></td>
+                </tr>
+            </table>
+            </fieldset>
+            <h3>Additional Comments</h3>
+            <table>
+                <tr>
+                    <th>Aspect</th>
+                    <th>Comments/Suggestions</th>
+                </tr>
+                <tr>
+                    <td>Overall Program Quality</td>
+                    <td><textarea rows="2" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Strengths</td>
+                    <td><textarea rows="2" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Areas for Improvement</td>
+                    <td><textarea rows="2" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Additional Feedback:</td>
+                    <td><textarea rows="2" cols="50"></textarea></td>
+                </tr>
+            </table>
+    
+            <h3>Personal Information</h3>
+            <fieldset>
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>Student ID:</label>
+                <input type="text" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label>Department:</label>
+                <input type="text" name="department" required>
+            </div>
+            <div class="form-group">
+                <label>Program of Study:</label>
+                <input type="text" name="program" required>
+            </div>
+            <div class="form-group">
+                <label>Batch:</label>
+                <input type="text" name="batch" required>
+            </div>
+    
+            <div class="signature">
+                <label>Signature & Date:</label>
+                <input type="text" name="signature" required><br>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+    </body>

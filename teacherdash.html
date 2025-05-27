@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Army University of Engineering & Technology - Teacher Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div style="display: flex; align-items: center;">
+            <img src="images/BAUET-Logo-1.png" alt="University Logo">
+            <div class="header-text">
+                <h1>Bangladesh Army University of Engineering & Technology</h1>
+                <h2>Teacher Dashboard</h2>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="content">
+            <div class="content-header">
+                <button class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1>Contents</h1>
+            </div>
+
+            <ul id="content-menu">
+                <li><a href="#"><i class="fas fa-comment-dots"></i> Course Feedback</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Peer Feedback</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> CO & PO Marks Input</a></li>
+                <li><a href="#"><i class="fas fa-scroll"></i> Thesis Feedback</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> OBE Transcript Input</a></li>
+                <li><a href="#"><i class="fas fa-file-alt"></i> Lesson Plan Generate</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard">
+            <div class="card" onclick="location.href='#peer-feedback'">
+                <h3><u>Peer Feedback</u></h3>
+                <ul>
+                    <li><a href="#">View Feedback</a></li>
+                    <li><a href="#">Submit Feedback</a></li>
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#course-feedback'">
+                <h3><u>Course Feedback</u></h3>
+                <ul>
+
+                    <li><a href="#">View Comments</a></li>
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#co-po-marks'">
+                <h3><u>CO & PO Marks Input</u></h3>
+                <ul>
+                    <li><a href="#">Input Marks</a></li>
+                    <li><a href="#">View Marks</a></li>
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#thesis-feedback'">
+                <h3><u>Thesis Feedback</u></h3>
+                <ul>
+                    <li><a href="#">Submit Feedback</a></li>
+
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#lessonplangenerate'">
+                <h3><u>Lesson Plan Generate</u></h3>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/lessonplantheory.html" target = "_blank">Generate</a></li>
+                    
+                </ul>
+            </div>
+            <div class="card" onclick="location.href='#obe-transcript'">
+                <h3><u>OBE Transcript Input</u></h3>
+                <ul>
+                    <li><a href="#">Input Transcript</a></li>
+                    <li><a href="#">View Transcript</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("content-menu");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
